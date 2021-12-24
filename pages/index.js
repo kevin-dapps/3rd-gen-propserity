@@ -1,213 +1,107 @@
-import Head from 'next/head'
-import Link from 'next/link'
+import Layout from '../components/layout'
+import Slider from '../components/slider'
+import Company from '../components/company'
 
 export default function Home() {
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <Slider />
+      <section id="content">
+          <div class="content-wrap pt-0">
+            <div class="section border-top-0 mt-0">
+              <Company />
+            </div>
 
-      <main>
-        <h1 className="title">
-          Read{' '}
-          <Link href="/posts/first-post">
-            <a>this page!</a>
-          </Link>
-        </h1>
+            <div class="heading-block center">
+              <h2>Why choose us?</h2>
+              <span>Here are a few of the things we take care of.</span>
+            </div>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+            <div class="container clearfix">
+              <div class="row col-mb-50">
+                <div class="col-sm-12 col-lg-4">
+                  <div class="feature-box fbox-border fbox-effect">
+                    <div class="fbox-icon">
+                      <a href="#"><i class="icon-money i-alt"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h3>Bills</h3>
+                      <p>We pay rent early and pay for all utilities, including landscaping & pest control services.</p>
+                    </div>
+                  </div>
+                </div>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="feature-box fbox-border fbox-effect">
+                    <div class="fbox-icon">
+                      <a href="#"><i class="icon-toolbox i-alt"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h3>Maintenance</h3>
+                      <p>We will take care of all minor maintenance & repairs throughout the entire lease term.</p>
+                    </div>
+                  </div>
+                </div>
 
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="feature-box fbox-border fbox-effect">
+                    <div class="fbox-icon">
+                      <a href="#"><i class="icon-hands-wash i-alt"></i></a>
+                    </div>
+                    <div class="fbox-content">
+                      <h3>Cleaning</h3>
+                      <p>Property will always be in pristine condition as it gets deep cleaned for every guest.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+            </div>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            <div class="promo topmargin-lg promo-border bottommargin-lg promo-full py-5 px-2">
+              <div class="container clearfix">
+                <div class="row align-items-center">
+                  <div class="col-12 col-lg">
+                    <h3>Own a <span>Vacation</span> property?</h3>
+                    <span>We offer full service vacation rental management to help you maximize your revenue while creating a wonderful space to create lifelong memories to all your guests and a hands-off experience to you. </span>
+                  </div>
+                  <div class="col-12 col-lg-auto mt-4 mt-lg-0">
+                    <a href="contact" class="button button-large button-circle m-0">Contact Us</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="container clearfix">  
+              <div class="row col-mb-50">   
+                <div class="col-md-5 d-flex align-items-center" ><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                    <img src="images/landing/why_us.jpg" class="chartjs-render-monitor" style={{borderRadius: 10 }} />
+                </div>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className="logo" />
-        </a>
-      </footer>
+                <div class="col-md-7">
+                  <div class="fancy-title title-bottom-border">
+                    <h3>What are your benefits as a Host?</h3>
+                  </div>            
 
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
+                  <ul class="iconlist iconlist-color mb-0">
+                      <li><i class="icon-ok"></i> Passive income property with a complete hands off experience.</li>
+                      <li><i class="icon-ok"></i> Increase the profitability of your property while giving you flexibility and security.</li>
+                      <li><i class="icon-ok"></i> We offer $1 million in host protection insurance from Airbnb.</li>
+                      <li><i class="icon-ok"></i> As Airbnb & Vacation Rental experts we optimize your listing and pricing, generating between 10% – 40% more in revenue and occupancy.</li>
+                  </ul>
+                </div>
+              </div>  
+            </div>  
+          </div>
+      </section>
+    </>
+  )
+}
 
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+Home.getLayout = function getLayout(page) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }
