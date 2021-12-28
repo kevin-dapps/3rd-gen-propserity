@@ -26,10 +26,53 @@ export default function Contact() {
 
       <section id="content">
         <div class="content-wrap pt-0">
-          <div class="section border-top-0 mt-0">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-lg-8 col-sm-7 col-10">
+        <div class="container">
+            <div class="row gutter-40 col-mb-80">
+              <div class="postcontent col-lg-9 px-0">
                 <ContactForm />
+              </div>
+
+              <div class="sidebar col-lg-3 pt-5">
+
+                <div class="widget clearfix" style={{
+                    backgroundImage: "url('images/world-map.png')",
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center center",
+                    backgroundSize: "100%"
+                    }}>
+                  <h4>Headquarters</h4>
+                  
+                  <div>
+                    <strong>Location:</strong> West Palm Beach, FL<br />
+                    <strong>Email:</strong> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
+                  </div>
+                  
+                  <br />
+
+                  <h4>Business Hours</h4>
+              
+                  <div>
+                    <strong>Mon - Fri:</strong> 9am-5pm<br />
+                    <strong>Saturday:</strong> 10am-3pm<br />
+                    <strong>Sunday:</strong> Closed
+                  </div>
+                </div>
+                
+                <div class="widget border-0 pt-0">
+
+
+                  <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank" class="social-icon si-small si-dark si-instagram">
+                    <i class="icon-instagram"></i>
+                    <i class="icon-instagram"></i>
+                  </a>
+
+
+                  <a href="mailto:support@3rdgenprosperity.com" target="_blank" class="social-icon si-small si-dark si-email">
+                    <i class="icon-email"></i>
+                    <i class="icon-email"></i>
+                  </a>
+                </div>
+
               </div>
             </div>
           </div>

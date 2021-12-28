@@ -7,8 +7,8 @@ export default function Header() {
         <div class="header-row">
 
           <div id="logo" class="border-0">
-            <a href="/" class="standard-logo" data-dark-logo="images/logo-dark.png"><img src="images/logo.png" alt="Canvas Logo" /></a>
-            <a href="/" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img src="images/logo@2x.png" alt="Canvas Logo" /></a>
+            <a href="/" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Logo" /></a>
+            <a href="/" class="retina-logo" data-dark-logo="images/logo@2x.png"><img src="images/logo@2x.png" alt="Logo" /></a>
           </div>
 
           <div id="primary-menu-trigger">
