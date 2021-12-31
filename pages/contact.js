@@ -15,12 +15,8 @@ export default function Contact() {
         }
       }>
 
-        <div class="container clearfix">
-          <h1>Contact Us</h1>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">Contact</a></li>
-          </ol>
+        <div class="container center clearfix">
+          <h1 class="text-white">Contact Us</h1>
         </div>
       </section>
 
@@ -61,13 +57,13 @@ export default function Contact() {
                 <div class="widget border-0 pt-0">
 
 
-                  <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank" class="social-icon si-small si-dark si-instagram">
+                  <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank" class="social-icon si-medium si-colored si-instagram">
                     <i class="icon-instagram"></i>
                     <i class="icon-instagram"></i>
                   </a>
 
 
-                  <a href="mailto:support@3rdgenprosperity.com" target="_blank" class="social-icon si-small si-dark si-email">
+                  <a href="mailto:support@3rdgenprosperity.com" target="_blank" class="social-icon si-medium si-colored si-google">
                     <i class="icon-email"></i>
                     <i class="icon-email"></i>
                   </a>

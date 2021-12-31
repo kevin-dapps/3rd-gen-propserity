@@ -1,12 +1,12 @@
 
 export default function Header() {
   return (
-  <header id="header" class="full-header transparent-header dark">
+  <header id="header" class="full-header transparent-header border-0">
     <div id="header-wrap" class="border-0">
       <div class="container">
         <div class="header-row">
 
-          <div id="logo" class="border-0">
+          <div id="logo" class="border-0 p-1">
             <a href="/" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Logo" /></a>
             <a href="/" class="retina-logo" data-dark-logo="images/logo@2x.png"><img src="images/logo@2x.png" alt="Logo" /></a>
           </div>

@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-  <footer id="footer" class="dark">
+  <footer id="footer" style={{ border: 0 }}>
     <div class="container">
       <div class="footer-widgets-wrap">
         <div class="row col-mb-50">
@@ -27,12 +27,7 @@ export default function Header() {
 
               <div class="col-md-4">
 
-                <div class="widget clearfix" style={{
-                    backgroundImage: "url('images/world-map.png')",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center center",
-                    backgroundSize: "100%"
-                    }}>
+                <div class="widget clearfix">
                   <h4>Headquarters</h4>
                   
                   <div>
@@ -68,7 +63,9 @@ export default function Header() {
 
           <div class="col-md-6 text-center text-md-end">
             <div class="clear"></div>
-            <i class="icon-envelope2"></i> <a href="mailto:support@3rdgenprosperity.com" class="text-white">support@3rdgenprosperity.com</a>
+            <i class="icon-envelope2"></i> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
+            <span class="middot">·</span>
+            <i class="icon-instagram"></i> <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank">3rdgen_prosperity</a>
           </div>
 
         </div>

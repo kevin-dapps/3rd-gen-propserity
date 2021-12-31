@@ -1,0 +1,10 @@
+.error {
+  border: 2px solid #FF6565;
+}
+
+.errorMessage {
+  color: #FF6565;
+  padding: .5em 1.5em;
+  height: 1em;
+  font-size: .8em;
+}

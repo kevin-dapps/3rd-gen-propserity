@@ -14,12 +14,8 @@ export default function About() {
         }
       }>
 
-        <div class="container clearfix">
-          <h1>About Us</h1>
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page"><a href="#">About</a></li>
-          </ol>
+        <div class="container center clearfix">
+          <h1 class="text-white">About Us</h1>
         </div>
       </section>
 
