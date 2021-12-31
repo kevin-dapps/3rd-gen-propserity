@@ -22,9 +22,9 @@ export default function ContactForm(){
       clientAddress: Yup.string().required('*Required'),
       clientAddressType: Yup.string().min(1).required('*Required'),
     }),
-    onSubmit: async (values, { setSubmitting }) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitting(true)
-      await handleSubmit(values)
+      await handleSubmit(values, resetForm)
       setSubmitting(false)
     },
   });
@@ -39,7 +39,7 @@ export default function ContactForm(){
         .join("&")
   }
 
-  const handleSubmit = async (formData) => {
+  const handleSubmit = async (formData, resetForm) => {
     await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -48,7 +48,7 @@ export default function ContactForm(){
         ...formData
       })
     }).then(() => {
-      document.getElementById("contactForm").reset();
+      resetForm();
 
       setResponse({
         message: 'Thank you for submitting your inquiry, we will be reaching out to you within 48hrs'
@@ -77,7 +77,7 @@ export default function ContactForm(){
             value={formik.values.clientName}
             onChange={handleChange}
             onBlur={formik.handleBlur}
-            className={`form-control ${formik.touched.clientName && formik.errors.clientName ? styles.error : '' }`} />
+            className={`form-control form-control-sm ${formik.touched.clientName && formik.errors.clientName ? styles.error : '' }`} />
 
           {formik.touched.clientName && formik.errors.clientName ?
             (<div className={styles.errorMessage}>{formik.errors.clientName}</div>) : null}
@@ -93,7 +93,7 @@ export default function ContactForm(){
             value={formik.values.clientPhone}
             onChange={handleChange}
             onBlur={formik.handleBlur}
-            className={`form-control ${formik.touched.clientPhone && formik.errors.clientPhone ? styles.error : '' }`} />
+            className={`form-control form-control-sm ${formik.touched.clientPhone && formik.errors.clientPhone ? styles.error : '' }`} />
 
           {formik.touched.clientPhone && formik.errors.clientPhone ?
             (<div className={styles.errorMessage}>{formik.errors.clientPhone}</div>) : null}
@@ -109,7 +109,7 @@ export default function ContactForm(){
             value={formik.values.clientEmail.toLowerCase()}
             onChange={handleChange}
             onBlur={formik.handleBlur}
-            className={`form-control ${formik.touched.clientEmail && formik.errors.clientEmail ? styles.error : '' }`} />
+            className={`form-control form-control-sm ${formik.touched.clientEmail && formik.errors.clientEmail ? styles.error : '' }`} />
           {formik.touched.clientEmail && formik.errors.clientEmail ?
             (<div className={styles.errorMessage}>{formik.errors.clientEmail}</div>) : null}
         </div>
@@ -124,7 +124,7 @@ export default function ContactForm(){
             value={formik.values.clientAddress}
             onChange={handleChange}
             onBlur={formik.handleBlur}
-            className={`form-control ${formik.touched.clientAddress && formik.errors.clientAddress ? styles.error : '' }`} />
+            className={`form-control form-control-sm ${formik.touched.clientAddress && formik.errors.clientAddress ? styles.error : '' }`} />
 
           {formik.touched.clientAddress && formik.errors.clientAddress ?
             (<div className={styles.errorMessage}>{formik.errors.clientAddress}</div>) : null}
@@ -139,7 +139,7 @@ export default function ContactForm(){
             value={formik.values.clientAddressType}
             onChange={handleChange}
             onBlur={formik.handleBlur}
-            className={`form-select ${formik.touched.clientAddressType && formik.errors.clientAddressType ? styles.error : '' }`}>
+            className={`form-select form-select-sm ${formik.touched.clientAddressType && formik.errors.clientAddressType ? styles.error : '' }`}>
             <option value="">Choose property type</option>
             <option>Corporate Lease</option>
             <option>Vacation Rental Management</option>
@@ -158,8 +158,8 @@ export default function ContactForm(){
             value={formik.values.clientMessage}
             onChange={handleChange}
             onBlur={formik.handleBlur}
-            className={`form-control ${formik.touched.clientMessage && formik.errors.clientMessage ? styles.error : '' }`}
-            style={{minHeight: 100, maxHeight: 200}}></textarea>
+            className={`form-control form-control-sm ${formik.touched.clientMessage && formik.errors.clientMessage ? styles.error : '' }`}
+            style={{height: 85, resize: "none"}}></textarea>
           
           {formik.touched.clientMessage && formik.errors.clientMessage ?
             (<div className={styles.errorMessage}>{formik.errors.clientMessage}</div>) : null}
@@ -168,11 +168,6 @@ export default function ContactForm(){
         <input type="hidden" name="form-name" value="contact" />
 
         <div class="col-12">
-          {response && (
-            <div>
-              {response.message}
-            </div>
-          )}
           <button 
             type="submit" 
             disabled={formik.isSubmitting}
@@ -183,6 +178,12 @@ export default function ContactForm(){
               )
             }
           </button>
+
+          {response && (
+            <div class="alert alert-secondary p-2 mt-2 mb-0 small">
+              {response.message}
+            </div>
+          )}
         </div>
       </div>
     </form>
