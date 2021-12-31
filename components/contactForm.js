@@ -168,7 +168,9 @@ export default function ContactForm(){
             {formik.touched.clientMessage && formik.errors.clientMessage ?
               (<div className={styles.errorMessage}>{formik.errors.clientMessage}</div>) : null}
           </div>
-        
+          
+          <input type="hidden" name="form-name" value="contact" />
+          
           <div class="col-12">
             {response && (
               <div>
