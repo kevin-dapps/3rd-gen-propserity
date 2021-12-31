@@ -40,7 +40,7 @@ export default function ContactForm(){
   }
 
   const handleSubmit = async (formData) => {
-    await fetch("/pages/success", {
+    await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -61,7 +61,7 @@ export default function ContactForm(){
   }
 
   return (
-    <form class="mb-0" id="contactForm" name="contact" method="POST" data-netlify="true" onSubmit={formik.onSubmit}>
+    <form class="mb-0" id="contactForm" name="contact" method="POST" data-netlify="true" onSubmit={(e) => { e.preventDefault(); formik.handleSubmit(e)}}>
 
       <div class="row form-section p-4 bg-white">
         <h3 class="mb-0">FREE PROPERTY ANALYSIS</h3>
