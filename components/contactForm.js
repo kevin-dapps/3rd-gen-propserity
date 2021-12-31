@@ -40,7 +40,7 @@ export default function ContactForm(){
   }
 
   const handleSubmit = async (formData) => {
-    await fetch("/", {
+    await fetch("/pages/success", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
@@ -141,8 +141,8 @@ export default function ContactForm(){
             onBlur={formik.handleBlur}
             className={`form-select ${formik.touched.clientAddressType && formik.errors.clientAddressType ? styles.error : '' }`}>
             <option value="">Choose property type</option>
-            <option value="corporate_lease">Corporate Lease</option>
-            <option value="vacation_rental_management">Vacation Rental Management</option>
+            <option>Corporate Lease</option>
+            <option>Vacation Rental Management</option>
           </select>
 
           {formik.touched.clientAddressType && formik.errors.clientAddressType ?
@@ -175,6 +175,7 @@ export default function ContactForm(){
           )}
           <button 
             type="submit" 
+            disabled={formik.isSubmitting}
             className="button button-large m-0 w-100 custom-submit">
             {formik.isSubmitting ?
               <i class="icon-line-loader icon-spin m-0"></i>: (
