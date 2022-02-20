@@ -61,13 +61,13 @@ export default function ContactForm(){
   }
 
   return (
-    <form class="mb-0" id="contactForm" name="contact" method="POST" data-netlify="true" onSubmit={(e) => { e.preventDefault(); formik.handleSubmit(e)}}>
+    <form className="mb-0" id="contactForm" name="contact" method="POST" data-netlify="true" onSubmit={(e) => { e.preventDefault(); formik.handleSubmit(e)}}>
 
-      <div class="row form-section p-4 bg-white">
-        <h3 class="mb-0">FREE PROPERTY ANALYSIS</h3>
-        <span class="text-muted small mb-3">Let our experts help make <b>YOU</b> money from your property.</span>
+      <div className="row form-section p-4 bg-white">
+        <h3 className="mb-0">FREE PROPERTY ANALYSIS</h3>
+        <span className="text-muted small mb-3">Let our experts help make <b>YOU</b> money from your property.</span>
 
-        <div class="col-lg-6 col-12 form-group">
+        <div className="col-lg-6 col-12 form-group">
           <input 
             type="text" 
             name="clientName" 
@@ -83,7 +83,7 @@ export default function ContactForm(){
             (<div className={styles.errorMessage}>{formik.errors.clientName}</div>) : null}
         </div>
 
-        <div class="col-lg-6 col-12 form-group">
+        <div className="col-lg-6 col-12 form-group">
           <input 
             type="tel"
             name="clientPhone"
@@ -99,7 +99,7 @@ export default function ContactForm(){
             (<div className={styles.errorMessage}>{formik.errors.clientPhone}</div>) : null}
         </div>
 
-        <div class="col-12 form-group">
+        <div className="col-12 form-group">
           <input 
             type="email"
             name="clientEmail"
@@ -114,7 +114,7 @@ export default function ContactForm(){
             (<div className={styles.errorMessage}>{formik.errors.clientEmail}</div>) : null}
         </div>
 
-        <div class="col-12 form-group">
+        <div className="col-12 form-group">
           <input 
             type="text" 
             name="clientAddress" 
@@ -130,7 +130,7 @@ export default function ContactForm(){
             (<div className={styles.errorMessage}>{formik.errors.clientAddress}</div>) : null}
         </div>
 
-        <div class="col-12 form-group">
+        <div className="col-12 form-group">
           <select 
             name="clientAddressType" 
             id="clientAddressType" 
@@ -149,11 +149,11 @@ export default function ContactForm(){
             (<div className={styles.errorMessage}>{formik.errors.clientAddressType}</div>) : null}
         </div>
 
-        <div class="col-12 form-group">
+        <div className="col-12 form-group">
           <textarea 
             name="clientMessage" 
             id="clientMessage" 
-            class="form-control" 
+            className="form-control" 
             placeholder="Message" 
             value={formik.values.clientMessage}
             onChange={handleChange}
@@ -167,20 +167,20 @@ export default function ContactForm(){
         
         <input type="hidden" name="form-name" value="contact" />
 
-        <div class="col-12">
+        <div className="col-12">
           <button 
             type="submit" 
             disabled={formik.isSubmitting}
             className="button button-large m-0 w-100 custom-submit">
             {formik.isSubmitting ?
-              <i class="icon-line-loader icon-spin m-0"></i>: (
+              <i className="icon-line-loader icon-spin m-0"></i>: (
                 "Submit"
               )
             }
           </button>
 
           {response && (
-            <div class="alert alert-secondary p-2 mt-2 mb-0 small">
+            <div className="alert alert-secondary p-2 mt-2 mb-0 small">
               {response.message}
             </div>
           )}

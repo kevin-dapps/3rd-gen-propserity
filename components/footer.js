@@ -1,19 +1,19 @@
 export default function Header() {
   return (
   <footer id="footer" style={{ border: 0 }}>
-    <div class="container">
-      <div class="footer-widgets-wrap">
-        <div class="row col-mb-50">
-          <div class="col-lg-12">
-            <div class="row col-mb-50">
-              <div class="col-md-4">
-                <div class="widget clearfix">
-                  <img src="images/logo.png" alt="Image" class="footer-logo" style={{ width: "200px" }} />
+    <div className="container">
+      <div className="footer-widgets-wrap">
+        <div className="row col-mb-50">
+          <div className="col-lg-12">
+            <div className="row col-mb-50">
+              <div className="col-md-4">
+                <div className="widget clearfix">
+                  <img src="images/logo.png" alt="Image" className="footer-logo" style={{ width: "200px" }} />
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="widget widget_links clearfix">
+              <div className="col-md-4">
+                <div className="widget widget_links clearfix">
 
                   <h4>Information</h4>
 
@@ -25,9 +25,9 @@ export default function Header() {
                 </div>
               </div>
 
-              <div class="col-md-4">
+              <div className="col-md-4">
 
-                <div class="widget clearfix">
+                <div className="widget clearfix">
                   <h4>Headquarters</h4>
                   
                   <div>
@@ -53,19 +53,19 @@ export default function Header() {
     </div>
 
     <div id="copyrights">
-      <div class="container">
+      <div className="container">
 
-        <div class="row col-mb-30">
+        <div className="row col-mb-30">
 
-          <div class="col-md-6 text-center text-md-start">
+          <div className="col-md-6 text-center text-md-start">
             Copyrights &copy; 2022 All Rights Reserved by 3rd Gen Prosperity LLC.<br />
           </div>
 
-          <div class="col-md-6 text-center text-md-end">
-            <div class="clear"></div>
-            <i class="icon-envelope2"></i> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
-            <span class="middot">·</span>
-            <i class="icon-instagram"></i> <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank">3rdgen_prosperity</a>
+          <div className="col-md-6 text-center text-md-end">
+            <div className="clear"></div>
+            <i className="icon-envelope2"></i> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
+            <span className="middot">·</span>
+            <i className="icon-instagram"></i> <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank">3rdgen_prosperity</a>
           </div>
 
         </div>

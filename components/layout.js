@@ -5,7 +5,7 @@ import Script from 'next/script'
 import { useEffect } from 'react'
 
 export default function Layout({ children }) {
-  useEffect( () => { document.querySelector("body").classList.add("stretched") } );
+  useEffect( () => { document.querySelector("body").classList.add("stretched") }, []);
 
   return (
     <>
@@ -24,12 +24,12 @@ export default function Layout({ children }) {
       </Head>
       <Header />
       <main>
-        <div id="wrapper" class="clearfix">
+        <div id="wrapper" className="clearfix">
           {children}
         </div>
       </main>
 
-      <div id="gotoTop" class="icon-angle-up"></div>
+      <div id="gotoTop" className="icon-angle-up"></div>
 
       <script src="js/jquery.js"></script>
       <script src="js/plugins.min.js"></script> 
