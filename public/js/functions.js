@@ -561,7 +561,7 @@ var SEMICOLON = SEMICOLON || {};
 			if( $header.hasClass('floating-header') || $headerInc.hasClass('include-topbar') ) {
 				headerInc = headerInc + $header.offset().top;
 			}
-			$headerInc.css({ 'margin-top': -headerInc });
+			// $headerInc.css({ 'margin-top': -headerInc });
 			SEMICOLON.slider.sliderParallax();
 		},
 
