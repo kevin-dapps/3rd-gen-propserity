@@ -51,7 +51,7 @@ export default function ContactForm(){
       resetForm();
 
       setResponse({
-        message: 'Thank you for submitting your inquiry, we will be reaching out to you within 48hrs'
+        message: 'Thank you for submitting your inquiry, we will be reaching out to you shortly'
       })
     }).catch(error => {
       setResponse({
