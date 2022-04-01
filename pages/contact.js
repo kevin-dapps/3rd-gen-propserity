@@ -40,7 +40,7 @@ export default function Contact() {
                   
                   <div>
                     <strong>Location:</strong> West Palm Beach, FL<br />
-                    <strong>Email:</strong> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
+                    <strong>Email:</strong> <a href="mailto:3rdgenprosperity@gmail.com" target="_blank">3rdgenprosperity@gmail.com</a>
                   </div>
                   
                   <br />
@@ -63,7 +63,7 @@ export default function Contact() {
                   </a>
 
 
-                  <a href="mailto:support@3rdgenprosperity.com" target="_blank" className="social-icon si-medium si-colored si-google">
+                  <a href="mailto:3rdgenprosperity@gmail.com" target="_blank" className="social-icon si-medium si-colored si-google">
                     <i className="icon-email"></i>
                     <i className="icon-email"></i>
                   </a>

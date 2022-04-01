@@ -32,7 +32,7 @@ export default function Header() {
                   
                   <div>
                     <strong>Location:</strong> West Palm Beach, FL<br />
-                    <strong>Email:</strong> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
+                    <strong>Email:</strong> <a href="mailto:3rdgenprosperity@gmail.com" target="_blank">3rdgenprosperity@gmail.com</a>
                   </div>
                   
                   <br />
@@ -63,7 +63,7 @@ export default function Header() {
 
           <div className="col-md-6 text-center text-md-end">
             <div className="clear"></div>
-            <i className="icon-envelope2"></i> <a href="mailto:support@3rdgenprosperity.com" target="_blank">support@3rdgenprosperity.com</a>
+            <i className="icon-envelope2"></i> <a href="mailto:3rdgenprosperity@gmail.com" target="_blank">3rdgenprosperity@gmail.com</a>
             <span className="middot">·</span>
             <i className="icon-instagram"></i> <a href="https://www.instagram.com/3rdgen_prosperity" target="_blank">3rdgen_prosperity</a>
           </div>
